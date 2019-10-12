@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Proyecto 1 LFYP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylo.css"/>
 </head>
 
-<body
-    style='background-image: url(https://thomasarthurfightforlife.com/wp-content/uploads/lazerhawk-retro-style-abstract-synthwave_1844333.jpg);background-size: cover;'>
+<body>
     <center>
         <div id="central" style='margin: 17% 30% 15% 30%;background-color: #150016;color: yellow;'>
             <%include nav.html%>
@@ -17,11 +18,10 @@
                 <h2>Analizador</h2>
                 <h3>Ingresa el archivo</h3>
                 <input id="archivo" type="file" name="archivo" accept=".txt" style="margin-bottom: 10px;" />
-                <input id="botons" type="button" value="verificar" onclick="mostrar()" />
+                <input id="botons" type="button" value="Mostrar texto" onclick="mostrar()" />
+                <button type="button" class="btn btn-dark" onclick="mostrar()">Ver texto</button>
             </div>
             <div id="tabla" style="display: none;">
-                <textarea id="texto" name="texto" cols="50" rows="15" disabled="true"></textarea>
-                <br>
                 <input type="button" value="Analizar" id='verif' style="margin-bottom: 10px;" />
                 <input type="button" value="Proximo token" id='verif' style="margin-bottom: 10px;" />
                 <br>
@@ -29,8 +29,8 @@
             <div id='contenido' style="background-color: #505050; margin: 0% 10% 5% 10%; display:none;color:#150016;text-align: left; padding: 10px;">
 
             </div>
-            <input type="button" value="Analizar" id='get' style="margin-bottom: 10px; display: none;" />
-            <input type="button" value="Proximo token" id='post' style="margin-bottom: 10px; display: none;" />
+            <input type="button" value="Analizar y mostrar Token" id='get' style="margin-bottom: 10px; display: none;" />
+            <input type="button" value="Pedir Token" id='post' style="margin-bottom: 10px; display: none;" />
             
             <div id='tabla1'><table id="holanda">
                     <tr><td>Columna</td><td>Tipo</td><td>Token</td></tr>

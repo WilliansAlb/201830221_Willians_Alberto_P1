@@ -1,6 +1,28 @@
-img{
+img, #central{
     border-radius: 20px 20px 20px 20px;
 -moz-border-radius: 20px 20px 20px 20px;
 -webkit-border-radius: 20px 20px 20px 20px;
 border: 0px solid #000000;
+-webkit-box-shadow: 0px 0px 78px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 78px -6px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 78px -6px rgba(0,0,0,0.75);
+}
+@font-face{
+    font-family: 'Azonix';
+    src: url(./Azonix.otf);
+}
+
+body{
+    background-image: url(/img/back.jpg);
+    background-size: cover;
+    font-family: 'Azonix';
+}
+#tabla1{
+    margin: 30px;
+    background-color: #293f29;
+    border: 1px solid black;
+    border-collapse: separate;
+}
+button{
+    font-size: 10px;
 }
