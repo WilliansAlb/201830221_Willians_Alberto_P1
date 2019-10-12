@@ -11,37 +11,53 @@
 <body
     style='background-image: url(https://thomasarthurfightforlife.com/wp-content/uploads/lazerhawk-retro-style-abstract-synthwave_1844333.jpg);background-size: cover;'>
     <center>
-        <div id="central" style='margin: 22% 30% 5% 30%;background-color: #150016;color: yellow;'>
+        <div id="central" style='margin: 17% 30% 15% 30%;background-color: #150016;color: yellow;'>
             <%include nav.html%>
             <div id="ingresar">
+                <h2>Analizador</h2>
                 <h3>Ingresa el archivo</h3>
-                <input id="archivo" type="file" name="archivo" accept=".txt" style="margin-bottom: 10px;" /> 
+                <input id="archivo" type="file" name="archivo" accept=".txt" style="margin-bottom: 10px;" />
                 <input id="botons" type="button" value="verificar" onclick="mostrar()" />
             </div>
             <div id="tabla" style="display: none;">
                 <textarea id="texto" name="texto" cols="50" rows="15" disabled="true"></textarea>
                 <br>
-                <input type="button" value="Analizar" id='verif' style="margin-bottom: 10px;"/>
+                <input type="button" value="Analizar" id='verif' style="margin-bottom: 10px;" />
+                <input type="button" value="Proximo token" id='verif' style="margin-bottom: 10px;" />
                 <br>
             </div>
-        </div>
+            <div id='contenido' style="background-color: #505050; margin: 0% 10% 5% 10%; display:none;color:#150016;text-align: left; padding: 10px;">
 
+            </div>
+            <input type="button" value="Analizar" id='get' style="margin-bottom: 10px; display: none;" />
+            <input type="button" value="Proximo token" id='post' style="margin-bottom: 10px; display: none;" />
+            
+            <div id='tabla1'><table id="holanda">
+                    <tr><td>Columna</td><td>Tipo</td><td>Token</td></tr>
+            </table>
+            </div>
+        </div>
     </center>
+    <%include foot.html%>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/manejo.js"></script>
     <script>
         function mostrar() {
-            var x = document.getElementById('tabla');
+            var x = document.getElementById('contenido');
             var y = document.getElementById('central');
+            var z = document.getElementById('get');
+            var a = document.getElementById('post');
             if (x.style.display = 'none') {
                 x.style.display = 'block';
+                z.style.display = 'inline-block';
+                a.style.display = 'inline-block';
                 y.style.margin = '10% 30% 5% 30%';
             } else {
                 x.style.display = 'none';
             }
         }
     </script>
-    
+
 </body>
 
 </html>
